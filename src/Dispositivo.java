@@ -12,6 +12,12 @@ public class Dispositivo {
     void mostrarEstado(){
         System.out.println("Estado activo: "+ activo);
     }
+
+    //Public ya que de esta forma otras clases podran solicitar la activacion del dispositivo
+    public void activar(){
+        activo= true;
+        System.out.println("El dispositivo ha sido activado");
+    }
 }
 
 

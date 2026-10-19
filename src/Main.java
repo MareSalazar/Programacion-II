@@ -31,5 +31,9 @@ public class Main{
         System.out.println();
         dispositivo2.mostrarInformacion();
 
+        System.out.println("\n Activar dispositivo");
+        dispositivo2.mostrarEstado();
+        dispositivo2.activar();
+        dispositivo2.mostrarEstado();
     }
 }
