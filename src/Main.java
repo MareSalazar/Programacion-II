@@ -1,13 +1,35 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+public class Main{
+    public static void main(String[] args){
+        Dispositivo dispositivo1= new Dispositivo();
+        Dispositivo dispositivo2= new Dispositivo();
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+        //Primer Objeto
+        dispositivo1.nombre= "Laptop";
+        dispositivo1.tipo= "Portatil";
+        dispositivo1.activo= true;
+
+        //Segundo Objeto
+        dispositivo2.nombre= "Celular";
+        dispositivo2.tipo= "Movil";
+        dispositivo2.activo= false;
+
+        System.out.println("Dispositivo 1 ");
+        dispositivo1.mostrarInformacion();
+        dispositivo1.mostrarEstado();
+
+        System.out.println(); //salto de linea
+
+        System.out.println("Dispositivo 2 ");
+        dispositivo2.mostrarInformacion();
+        dispositivo2.mostrarEstado();
+
+        System.out.println("\n CAMBIO");
+        dispositivo1.nombre= "Laptop gamer";
+        dispositivo1.mostrarInformacion();
+        System.out.println();
+        dispositivo2.mostrarInformacion();
+
     }
 }
